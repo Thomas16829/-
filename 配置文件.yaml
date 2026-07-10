@@ -202,17 +202,6 @@ proxy-groups:
       - 住宅-洛杉矶
       - 自动中转
       - DIRECT
-    
-
-
-
-  - name: 住宅IP
-
-    type: select
-
-    proxies:
-
-      - 住宅-洛杉矶
 
 
 
