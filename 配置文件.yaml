@@ -20,7 +20,6 @@ dns:
   ipv6: false
 
   enhanced-mode: fake-ip
-
   fake-ip-range: 198.18.0.1/16
 
   fake-ip-filter:
@@ -33,8 +32,8 @@ dns:
     - 119.29.29.29
 
   fallback:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - 8.8.8.8
+    - 1.1.1.1
 
   fallback-filter:
     geoip: true
@@ -43,7 +42,7 @@ dns:
 
 
 # =====================
-# 节点
+# PROXIES
 # =====================
 
 proxies:
@@ -124,36 +123,29 @@ proxies:
     network: ws
 
     tls: true
-
     udp: true
 
     servername: thomas20265.ccwu.cc
 
     client-fingerprint: chrome
 
-
     ws-opts:
-
       path: "/?ed=2560"
-
       headers:
-
         Host: thomas20265.ccwu.cc
 
 
 
-# 住宅出口
+# 美国住宅IP
 
-  - name: 住宅-洛杉矶
+  - name: 住宅IP
 
     type: socks5
 
     server: 206.135.152.143
-
     port: 33943
 
     username: Gspg77qEpSKm
-
     password: IfUN7Zuldcj1
 
     udp: true
@@ -163,12 +155,13 @@ proxies:
 
 
 # =====================
-# 分组
+# GROUPS
 # =====================
-
 
 proxy-groups:
 
+
+# 自动最快中转
 
   - name: 自动中转
 
@@ -184,7 +177,6 @@ proxy-groups:
       - 美国B
       - 美国D
 
-
     url: http://www.gstatic.com/generate_204
 
     interval: 300
@@ -193,32 +185,37 @@ proxy-groups:
 
 
 
+# 主代理
+
   - name: 链式代理
 
     type: select
 
     proxies:
 
-      - 住宅-洛杉矶
+      - 住宅IP
       - 自动中转
       - DIRECT
 
 
 
 # =====================
-# 规则
+# RULES
 # =====================
-
 
 rules:
 
 
+# 局域网
+
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
 
 
-# 国内
+
+# 中国直连
 
   - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT
@@ -228,10 +225,11 @@ rules:
 # Google
 
   - DOMAIN-SUFFIX,google.com,链式代理
-  - DOMAIN-SUFFIX,gstatic.com,链式代理
   - DOMAIN-SUFFIX,googleapis.com,链式代理
-  - DOMAIN-SUFFIX,youtube.com,链式代理
-  - DOMAIN-SUFFIX,googlevideo.com,链式代理
+  - DOMAIN-SUFFIX,gstatic.com,链式代理
+  - DOMAIN-SUFFIX,ggpht.com,链式代理
+  - DOMAIN-SUFFIX,googleusercontent.com,链式代理
+  - DOMAIN-KEYWORD,google,链式代理
 
 
 
@@ -243,7 +241,15 @@ rules:
 
 
 
-# 社交住宅IP
+# YouTube
+
+  - DOMAIN-SUFFIX,youtube.com,链式代理
+  - DOMAIN-SUFFIX,googlevideo.com,链式代理
+  - DOMAIN-SUFFIX,ytimg.com,链式代理
+
+
+
+# 社交平台住宅IP
 
   - DOMAIN-SUFFIX,tiktok.com,住宅IP
   - DOMAIN-SUFFIX,tiktokcdn.com,住宅IP
@@ -253,7 +259,7 @@ rules:
 
 
 
-# 其他
+# 其他国外
 
   - DOMAIN-SUFFIX,telegram.org,链式代理
   - DOMAIN-SUFFIX,github.com,链式代理
