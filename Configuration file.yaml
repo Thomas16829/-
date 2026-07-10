@@ -133,11 +133,11 @@ proxies:
   - name: 住宅-洛杉磯
     type: socks5
 
-    server:206.135.152.143
-    port: 33943
+    server: 66.80.127.188
+    port: 39531
 
-    username: Gspg77qEpSKm
-    password: IfUN7Zuldcj1
+    username: hgBvv4YzIEjV
+    password: 6P1LHwUi0GMZ
 
     udp: true
 
