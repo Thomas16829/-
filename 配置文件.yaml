@@ -133,7 +133,7 @@ proxies:
   - name: 住宅-洛杉磯
     type: socks5
 
-    server:206.135.152.143
+    server: 206.135.152.143
     port: 33943
 
     username: Gspg77qEpSKm
