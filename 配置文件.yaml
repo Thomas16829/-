@@ -225,7 +225,6 @@ proxy-groups:
 
       - 住宅IP
       - 自动中转
-      - A-WS-中转
       - DIRECT
 
 
