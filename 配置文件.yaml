@@ -11,9 +11,9 @@ unified-delay: true
 external-controller: 127.0.0.1:9090
 
 
-# =====================
-# DNS
-# =====================
+profile:
+  store-selected: true
+  store-fake-ip: true
 
 dns:
   enable: true
@@ -42,8 +42,25 @@ dns:
 
 
 # =====================
-# PROXIES
+# 广告规则集
 # =====================
+
+rule-providers:
+
+  reject:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  anti-ad:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/anti-ad.yaml
+    interval: 86400
+
 
 proxies:
 
@@ -235,6 +252,12 @@ proxy-groups:
 
 rules:
 
+
+# =====================
+# 广告拦截
+# =====================
+
+  - RULE-SET,reject,REJECT
 
 # 局域网
 
