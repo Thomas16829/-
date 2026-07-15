@@ -127,7 +127,7 @@ proxies:
     client-fingerprint: chrome
 
 
- - name: "香港03 HKT"
+  - name: "香港03 HKT"
     type: anytls
     server: hktddns-cs2.aikunapp.com
     port: 6002
@@ -145,7 +145,7 @@ proxies:
 # 新加坡高速下载
 # =====================
 
- - name: "新加坡1|高速下载|移动优化"
+  - name: "新加坡1|高速下载|移动优化"
     type: anytls
     server: sg-fdc.aikunapp.com
     port: 6002
@@ -156,7 +156,7 @@ proxies:
     client-fingerprint: chrome
 
 
- - name: "新加坡2|高速下载|移动优化"
+  - name: "新加坡2|高速下载|移动优化"
     type: anytls
     server: sg-fdc2.aikunapp.com
     port: 6002
