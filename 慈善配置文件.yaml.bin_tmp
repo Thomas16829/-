@@ -124,7 +124,7 @@ proxies:
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
-   client-fingerprint: chrome
+    client-fingerprint: chrome
 
 
  - name: "香港03 HKT"
@@ -135,7 +135,7 @@ proxies:
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
-   client-fingerprint: chrome
+    client-fingerprint: chrome
 
 
 
@@ -153,7 +153,7 @@ proxies:
     udp: true
     sni: 127.0.0.1
     skip-cert-verify: true
-   client-fingerprint: chrome
+    client-fingerprint: chrome
 
 
  - name: "新加坡2|高速下载|移动优化"
@@ -164,7 +164,7 @@ proxies:
     udp: true
     sni: sfgneljdtryg.fdcservers.net
     skip-cert-verify: true
-   client-fingerprint: chrome
+    client-fingerprint: chrome
 
 
 # =====================
