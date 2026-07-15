@@ -339,6 +339,8 @@ rules:
 
   - RULE-SET,reject,REJECT
 
+  - RULE-SET,anti-ad,REJECT
+
 
 # 局域网
 
