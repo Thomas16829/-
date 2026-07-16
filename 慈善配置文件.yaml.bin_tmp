@@ -307,22 +307,15 @@ proxy-groups:
   - name: "Google专用"
     type: select
     proxies:
-      - "香港 aws  优化线路"
+      - "链式代理"
+      
 
-  
 
 # =====================
 # 分流规则
 # =====================
 
 rules:
-
-
-# 广告拦截
-
-  - RULE-SET,reject,REJECT
-
-  - RULE-SET,anti-ad,REJECT
 
 # 局域网
 
@@ -334,20 +327,21 @@ rules:
 
   - IP-CIDR,172.16.0.0/12,DIRECT
 
+# 广告拦截
+
+  - RULE-SET,reject,REJECT
+
+  - RULE-SET,anti-ad,REJECT
 
 
-# 国内直连
-
-  - GEOSITE,cn,DIRECT
-
-  - GEOIP,CN,DIRECT
-
+  - DOMAIN-KEYWORD,google,链式代理
 
 
 # =====================
 # Google Play / Android 更新优化
 # 自动中转
 # =====================
+
 
 # Play 商店 APP
 
@@ -440,7 +434,15 @@ rules:
 
   - IP-CIDR,74.125.0.0/16,Google专用,no-resolve
 
-  - IP-CIDR,173.194.0.0/16,Google专用,no-resolve# =====================
+  - IP-CIDR,173.194.0.0/16,Google专用,no-resolve
+# =====================
+
+
+# 国内直连
+
+  - GEOSITE,cn,DIRECT
+
+  - GEOIP,CN,DIRECT
 
 
 # YouTube
