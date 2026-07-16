@@ -153,7 +153,7 @@ proxies:
     client-fingerprint: chrome
 
 
-- name: "日本 aws 优化线路"
+  - name: "日本 aws 优化线路"
     type: anytls
     server: aws-2.aikunapp.com
     port: 6002
@@ -163,7 +163,7 @@ proxies:
     skip-cert-verify: true
     client-fingerprint: chrome
 
-- name: "新加坡 aws 优化线路"
+  - name: "新加坡 aws 优化线路"
     type: anytls
     server: aws-1.aikunapp.com
     port: 6002
