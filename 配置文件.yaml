@@ -486,11 +486,11 @@ rules:
 # AI
 # =====================
 
-  - DOMAIN-SUFFIX,openai.com,链式代理
+  - DOMAIN-SUFFIX,openai.com,住宅-洛杉矶
 
-  - DOMAIN-SUFFIX,chatgpt.com,链式代理
+  - DOMAIN-SUFFIX,chatgpt.com,住宅-洛杉矶
 
-  - DOMAIN-SUFFIX,claude.ai,链式代理
+  - DOMAIN-SUFFIX,claude.ai,住宅-洛杉矶
 
 
 # =====================
