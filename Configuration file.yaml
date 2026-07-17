@@ -286,25 +286,42 @@ proxies:
 proxy-groups:
 
 
-  - name: "香港前置"
+  proxy-groups:
 
-    type: url-test
 
-    proxies:
+- name: "香港链路"
 
-      - "香港01-HY2"
-      - "香港02-HY2"
+  type: url-test
 
-      - "香港A"
-      - "香港B"
-      - "香港C"
-      - "香港D"
+  proxies:
 
-    url: https://www.gstatic.com/generate_204
+    - 香港01-HY2
+    - 香港02-HY2
+    - 香港A
+    - 香港B
+    - 香港C
+    - 香港D
 
-    interval: 300
+  url: https://www.gstatic.com/generate_204
 
-    tolerance: 50
+  interval: 300
+
+  tolerance: 50
+
+
+
+- name: "香港链路"
+
+  type: select
+
+  proxies:
+
+    - 香港01-HY2
+    - 香港02-HY2
+    - 香港A
+    - 香港B
+    - 香港C
+    - 香港D
 
 
   - name: "住宅链式代理"
