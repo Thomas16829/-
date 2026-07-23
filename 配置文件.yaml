@@ -480,9 +480,9 @@ proxy-groups:
 
     url: https://www.gstatic.com/generate_204
 
-    interval: 300
+    interval: 2700
 
-    tolerance: 50
+    tolerance: 2700
 
 
 
