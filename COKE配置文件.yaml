@@ -1,6 +1,5 @@
 # =====================
-# Clash Meta 通用配置
-# 兼容 Clash Verge（电脑端）与 Clash Mi（iOS 端）
+# Clash Meta 真链式配置
 # =====================
 
 mixed-port: 7890
@@ -154,18 +153,17 @@ proxies:
 
 # =====================
 # 美国住宅IP
-# 注意：这里不再写 dialer-proxy，
-# 链式转发改为在下方 proxy-groups 用 relay 类型实现，
-# 兼容性更好（iOS Clash Mi 也能识别）
 # =====================
 
-  - name: "住宅-洛杉矶"
+
+   - name: "住宅-洛杉矶"
     type: socks5
     server: 207.145.156.49
     port: 33929
     username: XOnMOuRv2wRu
     password: 5iD0lGzcgcKh
     udp: true
+    dialer-proxy: "香港前置"
 
 # =====================
 # 代理组
@@ -188,9 +186,8 @@ proxy-groups:
 
   # 真正的链式代理：流量依次经过 香港前置 -> 住宅-洛杉矶
   - name: "住宅链式代理"
-    type: relay
+    type: select
     proxies:
-      - "香港前置"
       - "住宅-洛杉矶"
 
 # =====================
