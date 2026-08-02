@@ -92,7 +92,7 @@ proxy-providers:
     type: http
 
     # 修改成你的订阅地址
-    url: "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=8b370ff20a8aa97086dbb729e85434d5"
+    url: "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=d950ddec6ecea907e7859912d4f12611"
 
     path: ./proxy_providers/node.yaml
 
