@@ -124,7 +124,7 @@ proxies:
     type: anytls
     server: hktddns-cs1.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
@@ -135,7 +135,7 @@ proxies:
     type: anytls
     server: hktddns-cs2.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
@@ -150,28 +150,28 @@ proxies:
     type: anytls
     server: aws-hkhk.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: bootcdn.xuexi.cn
     skip-cert-verify: true
     client-fingerprint: chrome
 
-
-  - name: "日本 aws 优化线路"
-    type: anytls
-    server: aws-2.aikunapp.com
-    port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
-    udp: true
-    sni: bootcdn.xuexi.cn
-    skip-cert-verify: true
-    client-fingerprint: chrome
 
   - name: "香港2 aws 优化线路"
     type: anytls
+    server: aws-2.aikunapp.com
+    port: 6002
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    udp: true
+    sni: bootcdn.xuexi.cn
+    skip-cert-verify: true
+    client-fingerprint: chrome
+
+  - name: "香港3 aws 优化线路"
+    type: anytls
     server: aws-1.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: bootcdn.xuexi.cn
     skip-cert-verify: true
@@ -186,7 +186,7 @@ proxies:
     type: anytls
     server: sg-fdc.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: 127.0.0.1
     skip-cert-verify: true
@@ -197,7 +197,7 @@ proxies:
     type: anytls
     server: sg-fdc2.aikunapp.com
     port: 6002
-    password: 87bb94c6-e1ea-4fdb-91d0-bdd8233f39ea
+    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
     udp: true
     sni: sfgneljdtryg.fdcservers.net
     skip-cert-verify: true
@@ -276,6 +276,7 @@ proxy-groups:
 
       - "香港 aws  优化线路"
       - "香港2 aws 优化线路"
+      - "香港3 aws 优化线路"
 
       - "新加坡1|高速下载|移动优化"
       - "新加坡2|高速下载|移动优化"
