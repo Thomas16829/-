@@ -92,7 +92,7 @@ proxy-providers:
     type: http
 
     # 修改成你的订阅地址
-    url: "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=d950ddec6ecea907e7859912d4f12611"
+    url: "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=f540f19a2a2612c897db16557393526e"
 
     path: ./proxy_providers/node.yaml
 
@@ -122,9 +122,9 @@ proxies:
 
   - name: "🇭🇰 香港01"
     type: anytls
-    server: hktddns-cs1.aikunapp.com
+    server: us-rs.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
@@ -133,9 +133,9 @@ proxies:
 
   - name: "🇭🇰 香港02"
     type: anytls
-    server: hktddns-cs2.aikunapp.com
+    server: us-rs2.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
     sni: www.apple.com
     skip-cert-verify: true
@@ -148,30 +148,29 @@ proxies:
 
   - name: "🇭🇰 香港03"
     type: anytls
-    server: aws-hkhk.aikunapp.com
+    server: tj-us-1.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
-    sni: bootcdn.xuexi.cn
+    sni: www.apple.com
     skip-cert-verify: true
     client-fingerprint: chrome
 
-
   - name: "🇭🇰 香港04"
     type: anytls
-    server: aws-2.aikunapp.com
+    server: 172.96.161.216
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
-    sni: bootcdn.xuexi.cn
+    sni: www.apple.com
     skip-cert-verify: true
     client-fingerprint: chrome
 
   - name: "🇭🇰 香港05"
     type: anytls
-    server: aws-1.aikunapp.com
+    server: hinetddns3.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
     sni: bootcdn.xuexi.cn
     skip-cert-verify: true
@@ -184,22 +183,22 @@ proxies:
 
   - name: "🇭🇰 香港06"
     type: anytls
-    server: sg-fdc.aikunapp.com
+    server: hinetddns4.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
-    sni: 127.0.0.1
+    sni: www.apple.com
     skip-cert-verify: true
     client-fingerprint: chrome
 
 
   - name: "🇭🇰 香港07"
     type: anytls
-    server: sg-fdc2.aikunapp.com
+    server: tj-jp-1.aikunapp.com
     port: 6002
-    password: c965d413-0468-b7ed-ae8e-d0b1096d477d
+    password: 777743a5-b85a-cd6b-e3cd-147366122588
     udp: true
-    sni: sfgneljdtryg.fdcservers.net
+    sni: bootcdn.xuexi.cn
     skip-cert-verify: true
     client-fingerprint: chrome
 
