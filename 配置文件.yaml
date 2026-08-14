@@ -233,4 +233,4 @@ rules:
   - GEOIP,CN,DIRECT
 
   # ---- 默认兜底 ----
-  - MATCH,🇺🇸 住宅链式代理
+  - MATCH,🌏 Reality前置
