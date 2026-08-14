@@ -62,20 +62,33 @@ rule-providers:
 # 前置节点订阅（香港/日本机场订阅，自动获取最新节点）
 # =====================
 
+# ============================================================
+# 前置节点订阅
+# ============================================================
+
 proxy-providers:
 
   front_sub:
     type: http
+
     url: "https://8.217.98.112:1000/config?token=d1675ed4abfea3e40a1836ecee7004ca"
+
     path: ./proxy_providers/front_sub.yaml
-    interval: 3600
-    filter: "(香港|日本).*HY2"
+
+    interval: 1800
+
+    # 香港 SS
+    # 香港 HY2
+    # 日本 HY2
+    filter: "^(?:(?=.*香港)(?=.*(SS|HY2))|(?=.*日本)(?=.*HY2)).*$"
+
     exclude-type: "vmess|trojan|http|socks5|snell|ssr|vless|wireguard"
 
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      timeout: 5000
 
 # =====================
 # 节点（仅保留住宅 IP，前置节点全部来自订阅）
