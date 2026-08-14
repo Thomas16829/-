@@ -73,6 +73,7 @@ proxy-providers:
     url: "https://8.217.98.112:1000/config?token=d1675ed4abfea3e40a1836ecee7004ca"
     path: ./proxy_providers/front_sub.yaml
     interval: 1800
+    filter: "香港|HK|HongKong|Hong Kong|日本|JP|Tokyo|Japan"
 
     health-check:
       enable: true
