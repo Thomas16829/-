@@ -167,7 +167,7 @@ proxies:
   # SS
   # =====================
 
-  - name: "線路到期：2026-09-13"
+  - name: "線路到期：2026-09-11"
     type: ss
     server: c.pro.main.sys-metric-report.com
     port: 27003
@@ -238,7 +238,7 @@ proxy-groups:
       - "🇯🇵 日本01[HY2]"
       - "🇯🇵 日本02[HY2]"
       - "🇰🇷 韩国01[HY2]"
-      - "線路到期：2026-09-13"
+      - "線路到期：2026-09-11"
       - DIRECT
 
 
